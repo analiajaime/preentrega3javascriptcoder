@@ -4,9 +4,9 @@
 
 :root {
     --clr-main: #56a8e2;
-    --clr-main-light: #bfdcf7;
-    --clr-white: #ececec;
-    --clr-gray: #ffececec;
+    --clr-main-light: rgb(237, 166, 166);
+    --clr-white: white;
+    --clr-gray: white;
     --clr-red: #020007;
 }
 
@@ -31,10 +31,11 @@ a {
     text-decoration: none;
 }
 
-.wrapper {
+.container {
     display: grid;
     grid-template-columns: 1fr 4fr;
     background-color: var(black);
+    margin: 5px;
 }
 
 aside {
@@ -47,6 +48,7 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 10px;
 }
 
 .logo {
@@ -83,8 +85,6 @@ aside {
 .boton-menu.active {
     background-color: var(--clr-white);
     color: var(black);
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
     position: relative;
 }
 
@@ -96,7 +96,6 @@ aside {
     bottom: 100%;
     right: 0;
     background-color: transparent;
-    border-bottom-right-radius: .5rem;
     box-shadow: 0 1rem 0 var(--clr-white);
 }
 
@@ -108,7 +107,6 @@ aside {
     top: 100%;
     right: 0;
     background-color: transparent;
-    border-top-right-radius: .5rem;
     box-shadow: 0 -1rem 0 var(--clr-white);
 }
 
@@ -125,8 +123,7 @@ aside {
     background-color: var(--clr-white);
     color: var(black);
     padding: .15rem .25rem;
-    border-radius: .25rem;
-}
+   }
 
 .boton-carrito.active .numero {
     background-color: var(--clr-main);
@@ -142,7 +139,6 @@ main {
     background-color: var(--clr-white);
     margin: 1rem;
     margin-left: 0;
-    border-radius: 2rem;
     padding: 3rem;
 }
 
@@ -159,14 +155,13 @@ main {
 
 .producto-imagen {
     max-width: 100%;
-    border-radius: 1rem;
+    
 }
 
 .producto-detalles {
     background-color: var(--clr-main);
     color: var(black);
     padding: .5rem;
-    border-radius: 1rem;
     margin-top: -2rem;
     position: relative;
     display: flex;
@@ -184,7 +179,6 @@ main {
     color: var(--clr-main);
     padding: .4rem;
     text-transform: uppercase;
-    border-radius: 2rem;
     cursor: pointer;
     border: 2px solid var(--clr-white);
     transition: background-color .2s, color .2s;
@@ -311,7 +305,7 @@ main {
 
 @media screen and (max-width: 600px) {
 
-    .wrapper {
+    .container {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
